@@ -14,6 +14,14 @@ $context_factory = new ContextFactory();
 $foo = new Foo();
 $foo_class = new \ReflectionClass($foo);
 
+print "Expected:
+App\Foo::bar(), \$baz:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius, tellus in cursus
+dictum, justo odio sagittis velit, id iaculis mi dui id nisi.";
+
+print "\n\n=============\n\n";
+
+print "Actual:\n";
 foreach ($foo_class->getMethods() as $method) {
 	$method_docblock = $doc_block_factory->create(
 		$method,
