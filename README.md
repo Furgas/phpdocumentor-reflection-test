@@ -1,4 +1,4 @@
-```php
+```
 # php test.php
 Expected:
 App\Foo::bar(), $baz:
